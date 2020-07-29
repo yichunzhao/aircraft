@@ -1,5 +1,6 @@
 package com.ynz.democonfigproperties.aircraft;
 
+import com.ynz.democonfigproperties.aircraft.dto.JetFighterDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,12 +18,17 @@ public class AirCraftController {
     private final JetFighter f16;
 
     @GetMapping("f15")
-    public JetFighter getF15() {
-        return f15;
+    public JetFighterDTO getF15() {
+        return mapToDTO(f15);
     }
 
     @GetMapping("f16")
-    public JetFighter getF16() {
-        return f16;
+    public JetFighterDTO getF16() {
+        return mapToDTO(f16);
+    }
+
+    private JetFighterDTO mapToDTO(JetFighter fighter) {
+        return JetFighterDTO.builder().engine(fighter.getEngine()).range(fighter.getRange())
+                .speed(fighter.getSpeed()).weight(fighter.getWeight()).build();
     }
 }

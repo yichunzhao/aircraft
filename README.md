@@ -9,4 +9,8 @@ Using @ConfigurationProperties may binding a group of properties in an object, m
 
 ## Spring-boot-configuration-processor
 
+Adding the dependency above, rebuilding the project. It generates a json file that descripes the binding beans. 
+
+![image](https://user-images.githubusercontent.com/17804600/88746526-0ed8d600-d14d-11ea-81e6-c77b576ecd8a.png)
+
 

@@ -19,10 +19,4 @@ public class AppConfig {
         return new JetFighter();
     }
 
-    @Bean("x")
-    @ConfigurationProperties(prefix = "aircraft.x")
-    public JetFighter jetFighterX(){
-        return new JetFighter();
-    }
-
 }

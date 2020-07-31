@@ -10,7 +10,8 @@ Using @ConfigurationProperties may binding a group of properties in an object, m
 
 @Validated implements a proxy pattern that wraps the proxied data model. However, it introduces proxy behaviours. It may be not a good practice to @Validated data model.
 
-@Validated can be applied on the class level and combined with contrain annotations(@min,@max etc) on the method arguments(primitieve type), or @valid with a complex data type.
+@Validated can be applied on the class level and combined with contrain annotations(@min,@max etc) on the method arguments(primitieve type), 
+or @valid with a complex data type(a nested data model).
 
 
 ## Spring-boot-configuration-processor
